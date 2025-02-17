@@ -1,0 +1,120 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Navigation */
+nav a {
+    color: #ff6347;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition for content */
+}
+
+/* Content box inside the main area */
+.main-content {
+    padding: 20px;
+    width: 100%; /* Ensure the content box fills the width */
+    max-width: 800px; /* Set a maximum width for the content box */
+    text-align: center; /* Center align the text */
+}
+
+/* This class will shift the main content when the sidebar opens */
+.main-content.sidebar-open {
+    margin-left: 250px; /* Shift content when sidebar opens */
+}
+
+/* Buttons */
+button {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e5533f;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Text Boxes */
+.text-box {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box:hover {
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .header-box, .content-box, .footer-box {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

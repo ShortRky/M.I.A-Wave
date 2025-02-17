@@ -1,0 +1,155 @@
+/* Home Page Background */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Container for everything */
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adjust the gap to bring the boxes closer together */
+    margin-top: 0; /* Move the boxes up */
+}
+
+/* Styling the boxes */
+.header-box, .content-box, .footer-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 5px 0; /* Adjust the margin to bring the boxes closer together */
+    padding: 20px;
+    transition: all 0.3s ease;
+    width: 100%; /* Ensure the boxes are the same width */
+    max-width: 800px; /* Set a maximum width for the boxes */
+    text-align: center; /* Center align the text */
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Header Box */
+.header-box {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Content Box */
+.content-box {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Footer Box */
+.footer-box {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Buttons */
+.footer-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Text Boxes */
+.text-box {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.text-box:hover {
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+}
+
+/* Section Titles */
+.section-title {
+    color: white;
+}
+
+/* Glow Effect on Hover */
+.header-box:hover, .content-box:hover, .footer-box:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Buttons */
+button {
+    background-color: transparent;
+    border: 2px solid #ccc;
+    color: #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ccc;
+    color: black;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Sign Up Button */
+.sign-up-btn {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-up-btn:hover {
+    color: black;
+    background-color: #ccc;
+}
+
+/* Login Button */
+.login-btn {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    color: black;
+    background-color: #ccc;
+}
+
+/* Premium Button */
+.premium-btn {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.premium-btn:hover {
+    color: black;
+    background-color: #ccc;
+}

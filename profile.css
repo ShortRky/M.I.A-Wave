@@ -1,0 +1,165 @@
+/* Profile Page Styles */
+body {
+    background: linear-gradient(to bottom, green, black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 800px; /* Increase the max-width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-box {
+    background-color: rgba(128, 128, 128, 0.3); /* Grey 30% opacity */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.3s ease; /* Add transition for glow effect */
+}
+
+.profile-box:hover {
+    animation: glowChange 5s infinite; /* Apply the color-changing glow animation */
+}
+
+@keyframes glowChange {
+    0% {
+        box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8); /* Cyan */
+    }
+    25% {
+        box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8); /* Red */
+    }
+    50% {
+        box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8); /* Green */
+    }
+    75% {
+        box-shadow: 0px 0px 20px rgba(0, 0, 255, 0.8); /* Blue */
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8); /* Back to Cyan */
+    }
+}
+
+.profile-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-right {
+    flex: 2;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid black; /* Add black outline */
+}
+
+h1, p {
+    color: white;
+    margin: 0.5rem 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s ease;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Ensure the sidebar content is scrollable */
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.toggle-btn {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: fixed; /* Change to fixed to ensure visibility */
+    top: 10px;
+    left: 10px; /* Adjust position to ensure visibility */
+    z-index: 10; /* Ensure the button is above other elements */
+}
+
+.toggle-btn:hover {
+    background-color: #e5533f;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.profile-btn,
+.marketplace-btn,
+.tutoring-btn {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    opacity: 0; /* Hide buttons initially */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.sidebar.open .profile-btn,
+.sidebar.open .marketplace-btn,
+.sidebar.open .tutoring-btn {
+    opacity: 1; /* Show buttons when sidebar is open */
+}
+
+.profile-btn:hover,
+.marketplace-btn:hover,
+.tutoring-btn:hover {
+    background-color: #e5533f;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.open + .main-content {
+    margin-left: 250px;
+}

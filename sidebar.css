@@ -1,0 +1,115 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 60px; /* Shrink the sidebar width */
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0; /* Sidebar is always visible */
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Ensure the sidebar content is scrollable */
+    z-index: 999;
+    transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+.home-btn:hover,
+.profile-btn:hover,
+.marketplace-btn:hover,
+.tutoring-btn:hover,
+
+.journey-btn:hover {
+    background-color: #e5533f;
+    background: linear-gradient(to right, #5edd42, #252399); /* Gradient background on hover */
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.sidebar:hover {
+    width: 250px; /* Expand the sidebar on hover */
+}
+
+.home-btn:hover,
+.profile-btn:hover,
+.marketplace-btn:hover,
+.tutoring-btn:hover,
+.journey-btn:hover {
+    background-color: #e5533f;
+    box-shadow: 0 0 10px violet; /* Add a violet glow on hover */
+}
+
+.toggle-btn {
+    display: none; /* Hide the toggle button since the sidebar is always open */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    overflow: hidden; /* Hide overflow to ensure text is hidden */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+#profile-info {
+    opacity: 0; /* Hide the username initially */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.sidebar:hover #profile-info {
+    opacity: 1; /* Show the username on hover */
+}
+
+.home-btn,
+.profile-btn,
+.marketplace-btn,
+.tutoring-btn,
+.journey-btn {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    opacity: 0; /* Hide buttons initially */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.sidebar:hover .home-btn,
+.sidebar:hover .profile-btn,
+.sidebar:hover .marketplace-btn,
+.sidebar:hover .tutoring-btn,
+.sidebar:hover .journey-btn {
+    opacity: 1; /* Show buttons when sidebar is hovered */
+}
+
+.home-btn:hover,
+.profile-btn:hover,
+.marketplace-btn:hover,
+.tutoring-btn:hover,
+.journey-btn:hover {
+    background-color: #e5533f;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 60px; /* Shift main content to the right to accommodate the sidebar */
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar-content {
+    color: white;
+    padding: 20px;
+    padding: 1rem;
+    /* Add other styling for sidebar content */
+}

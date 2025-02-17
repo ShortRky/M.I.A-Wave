@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e19195f;
+    margin: 0;
+    padding: 0;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1f1457c2, #0f0e0d); /* Example gradient */
+    z-index: -1; /* Ensure it stays behind all other content */
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Example gradient */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative; /* Ensure correct positioning */
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Different gradient for the second card */
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(135deg, #ff6a00, #ee0979); /* Different gradient for the third card */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #007bff5b;
+    color: #703e3ebf;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header p {
+    font-size: 1.2em;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #454c5370;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+}
