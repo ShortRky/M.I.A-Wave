@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey</title>
+    <link rel="stylesheet" href="../CSS/thejourney.css">
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .box {
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: translateY(10px);
+            box-shadow: 0 10px 20px rgba(58, 201, 30, 0.756);
+        }
+
+        .title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .question {
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        .box1 {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+
+        .box2 {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        }
+
+        .box3 {
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        }
+
+        .clock {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+        }
+
+        .rank {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">>></button>
+        <div class="profile" onclick="window.location.href='profile.html'">
+            <img src="../images/profile.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+            <p id="profile-info">Guest</p>
+        </div>
+        <button class="home-btn" onclick="window.location.href='index.html'">Home</button>
+        <button class="profile-btn" onclick="window.location.href='profile.html'">Profile</button>
+        <button class="marketplace-btn" onclick="window.location.href='marketplace.html'">Marketplace</button>
+        <button class="tutoring-btn" onclick="window.location.href='tutoring.html'">Tutoring</button>
+        <button class="journey-btn" onclick="window.location.href='thejourney.html'">The Journey</button>
+    </div>
+    <div class="main-content" id="main-content">
+        <div class="clock" id="clock"></div>
+        <div class="rank" id="rank">Guest</div>
+        <div class="container">
+            <div class="box box1">
+                <div class="title">Why is it Paid Access?</div>
+                <div class="question">At this moment, it's only paid access because I'm a single designer trying my best to make everything functional and perfect.</div>
+            </div>
+            <div class="box box2" onclick="window.location.href='https://shortrky.github.io/Clock-website/'">
+                <div class="title">Why not a team?</div>
+                <div class="question">I Just have other projects i've made that i'm better doing solo, and this would be one of them because either people lack experience or just want to profit off of my work. (like this clock if you click me)</div>
+            </div>
+            <div class="box box3" onclick="window.location.href='https://linktr.ee/NMnarrative?utm_source=linktree_admin_share'">
+                <div class="title">Any other links to connect directly to you?</div>
+                <div class="question">Click here to visit my Linktree.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/sidebar.js"></script>
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const ampm = hours >= 12 ? 'pm' : 'am';
+            const formattedHours = hours % 12 || 12;
+            const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+            clockElement.textContent = `${formattedHours}:${formattedMinutes} ${ampm}`;
+        }
+
+        function updateRank() {
+            const rankElement = document.getElementById('rank');
+            // Replace with actual logic to determine user rank
+            const userRank = 'Developer'; // Example rank
+            rankElement.textContent = userRank;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+        updateRank();
+    </script>
+</body>
+</html>

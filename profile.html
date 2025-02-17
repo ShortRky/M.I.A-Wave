@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - W.A.V.E</title>
+    <link rel="stylesheet" href="../CSS/profile.css">
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+</head>
+<body class="fade-in">
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">>></button>
+        <div class="profile">
+            <img src="../images/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <p id="profile-info">Guest</p>
+        </div>
+        <button class="home-btn" onclick="window.location.href='index.html'">Home</button> <!-- Home button -->
+        <button class="profile-btn" onclick="window.location.href='profile.html'">Profile</button>
+        <button class="marketplace-btn" onclick="window.location.href='marketplace.html'">Marketplace</button>
+        <button class="tutoring-btn" onclick="window.location.href='tutoring.html'">Tutoring</button>
+        <button class="journey-btn" onclick="window.location.href='thejourney.html'">The Journey</button>
+    </div>
+    <div class="main-content" id="main-content">
+        <button class="toggle-btn" onclick="toggleSidebar()">>></button> <!-- Ensure the button to open the sidebar exists -->
+        <div class="profile-container">
+            <div class="profile-box">
+                <div class="profile-left">
+                    <img src="../images/profile.jpg" alt="Profile Picture" class="profile-pic" id="profilePic">
+                    <input type="file" id="fileInput" style="display: none;" accept="image/*">
+                </div>
+                <div class="profile-right">
+                    <h1>Profile</h1>
+                    <p id="profile-name">Name: Guest</p>
+                    <p id="profile-title">Title: Guest</p>
+                    <p id="profile-email">Email: guest@example.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/sidebar.js"></script>
+    <script src="../JS/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - W.A.V.E</title>
+    <link rel="stylesheet" href="../CSS/marketplace.css">
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="profile">
+            <img src="path/to/profile-pic.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+            <span id="profile-info">Username</span>
+        </div>
+        <button class="home-btn" onclick="window.location.href='index.html'">Home</button>
+        <button class="profile-btn" onclick="window.location.href='profile.html'">Profile</button>
+        <button class="marketplace-btn" onclick="window.location.href='marketplace.html'">Marketplace</button>
+        <button class="tutoring-btn" onclick="window.location.href='tutoring.html'">Tutoring</button>
+        <button class="journey-btn" onclick="window.location.href='thejourney.html'">The Journey</button>
+    </div>
+    <div class="main-content" id="main-content">
+        <header>
+            <h1>Student Study Material Marketplace</h1>
+        </header>
+        <main>
+            <div id="post-container" class="post-container">
+                <button id="post-button">Post Your Material</button>
+            </div>
+            <div id="marketplace-container" class="marketplace-container">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </main>
+    </div>
+    <script src="../JS/sidebar.js"></script>
+    <script src="../JS/marketplace.js"></script>
+</body>
+</html>

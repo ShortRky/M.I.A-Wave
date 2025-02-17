@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W.A.V.E - Welcome</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+</head>
+<body class="fade-in">
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">>></button> <!-- Keep this one -->
+        <div class="profile" onclick="window.location.href='profile.html'">
+            <img src="../images/profile.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+            <p id="profile-info">Guest</p>
+        </div>
+        <button class="home-btn" onclick="window.location.href='index.html'">Home</button> <!-- Home button -->
+        <button class="profile-btn" onclick="window.location.href='profile.html'">Profile</button>
+        <button class="marketplace-btn" onclick="window.location.href='marketplace.html'">Marketplace</button>
+        <button class="tutoring-btn" onclick="window.location.href='tutoring.html'">Tutoring</button>
+        <button class="journey-btn" onclick="window.location.href='thejourney.html'">The Journey</button> <!-- Corrected button class -->
+    </div>    
+    <div class="main-content" id="main-content">
+        <header class="header-box">
+            <h1>Welcome to W.A.V.E</h1>
+        </header>
+        <main class="container">
+            <section class="about">
+                <h2 class="section-title">What is W.A.V.E?</h2>
+                <div class="text-box">
+                    <p>W.A.V.E (Wisdom. Achievement. Victory. Education) is an online platform designed to provide students with the resources and tools they need to succeed academically. It offers a user-friendly experience with customizable features, helping students learn at their own pace and access valuable content all in one place, at an affordable price.</p>
+                </div>
+            </section>
+            <section class="about">
+                <h3 class="section-title">Why I Created W.A.V.E</h3>
+                <div class="text-box">
+                    <p>I created W.A.V.E to make education more accessible and engaging. It simplifies learning, allows for personalization, and encourages independent thinking. Combining my passion for tech and learning, W.A.V.E provides efficient tools for success.</p>
+                </div>
+            </section>
+            <section class="about">
+                <h4 class="section-title">Who Developed W.A.V.E?</h4>
+                <div class="text-box">
+                    <p>W.A.V.E was created by a passionate learner and developer, committed to making education more accessible, engaging, and efficient. Combining years of tech expertise and a personal desire to help others succeed, I built W.A.V.E to provide the best learning resources in an easy-to-use platform, empowering students to reach their full potential.</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-box">
+            <div class="footer-buttons">
+                <button class="login-btn" onclick="window.location.href='login.html'">Have an account?</button>
+                <button class="sign-up-btn" onclick="window.location.href='signup.html'">Sign up</button>
+                <button class="premium-btn" onclick="window.location.href='https://buy.stripe.com/6oE9DX0mtfQr57GaEE'">Join W.A.V.E Premium</button>
+            </div>
+        </footer>
+    </div>
+    <script src="../JS/sidebar.js"></script>
+</body>
+</html>
